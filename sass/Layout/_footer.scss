@@ -1,0 +1,30 @@
+.footer{
+   background-color: #3b3b3b;
+   color : white;
+   padding-bottom: 20px;
+  
+    &__title{
+    margin-left : 20px;
+    padding-top: 20px;  
+} 
+&__list{
+    list-style-type: none;
+    padding :0;
+    margin-left : 20px;
+    line-height : 1.7;
+     
+&__icon{
+    margin-right: 10px;
+    font-size: 15px;
+} 
+&__icon2{
+    margin-right: 10px;
+    font-size: 10px; 
+}
+}
+}
+
+
+
+  
+

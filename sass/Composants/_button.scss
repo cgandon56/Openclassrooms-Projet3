@@ -1,42 +1,46 @@
+/*boutons explorer et commander*/
+
 button{
     border-radius : 100px ;
-    background : linear-gradient(#FF79DA, #9356DC) ;
+    background : linear-gradient($color-secondary, $color-primary) ;
     border : none ; 
     color : white ;
-    padding: 15px;
-   width : fit-content ;
+    padding: 15px 0 15px 0;
+    width : 250px ;
     cursor: pointer;
     box-shadow: 0px 5px 10px 0px #BDBDBD; 
     transition: transform 400ms;
+    font-size: 16px;
+    margin :40px 0 0 0 ;
     &:hover {
         box-shadow: 0px 5px 10px 0px #676767 ;
         opacity: 0.8; 
-        } 
-       
+        }  
     }
 
-
- 
+/*cards et cellules */ 
 
 .card{
+    display: flex; 
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 15px 50px 15px;
+   
+}
+
+.box{
     display: flex;
-    border-radius: 20px;
-    margin-right: 20px;
-    margin-left: 20px; 
-    margin-bottom : 20px ;
-    padding-top : 20px;
-    padding-bottom: 20px;
-    cursor: pointer;  
-}
+box-shadow: 0px 5px 10px 0px #BDBDBD; 
+padding : 15px 15px 15px 15px; 
+border-radius : 15px;
+cursor: pointer;}
 
-a:-webkit-any-link {
-    cursor: pointer;
-}
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
+    
+
+
+
+
 
 
 

@@ -1,0 +1,31 @@
+/*animation arrivée progressive plats*/
+.anim{
+  &--0{
+   animation-delay: 0s;
+ }
+ &--1{
+   animation-delay: 0.1s;
+ }
+ &--2{
+   animation-delay: 0.2s;
+ }
+   &--3{
+       animation-delay: 0.3s;
+     }
+   &--4{
+       animation-delay: 0.4s;
+     }
+   &--5{
+       animation-delay: 0.5s;
+     }
+   &--6{
+       animation-delay: 0.6s;
+     } 
+     &--7{
+      animation-delay: 0.7s;
+    } &--8{
+      animation-delay: 0.8s;
+    }
+
+} 
+  

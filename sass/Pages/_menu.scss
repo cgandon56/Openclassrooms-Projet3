@@ -1,187 +1,80 @@
-/*General*/
-    
-.map{
-    display: flex;  
-     background-color: #e5e5e5;
-     width : 100% ;
-     justify-content: center;
-     align-items: baseline;
-     border-top : solid #bfbfbf ;
-    &__icon{
-        padding-right : 20px ;
-    }
-}
-
-.research {   
-    display: flex; 
-    background-color:  #f2f2f2;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    height: 250px;
-    &__title{ 
-        font-weight: bold;
-        font-size: 22px;
-        padding: 20px 60px 0 60px;
-        margin : 0;
-    }
-    &__subtitle{
-    margin-right: 20px;
-    margin-left: 20px;  
-    padding-bottom : 10px;
-}
-}
-
-.steps{
+.img__menu{
+    width : 100%;
+  }
+.menu{
+    border-radius: 30px 30px 0 0;
     display: flex;
     flex-direction: column;
+    background-color :$color-cards;
+    margin-top: -30px;
+    position: relative;
     &__title{
-        font-weight: bold;
-        margin-left : 10px ;
-        font-size: 22px;
-            }
-    &__card{
-        flex-direction: row ;
-        display: flex;
-        background-color: #f2F2F2;
-        box-shadow: 0px 5px 10px 0px #BDBDBD; 
-    }
-    &__number{
-        width : 20px;
-        height : 20px ;
-        border-radius: 50px;
-        background: #9356DC;
-        justify-content: center;
-        font-size: 12px;
-        color : white ;
-        align-items: center;
-        display: flex;
-        margin-left: -10px;
-    }
-    &__icon{
-        color : #757575 ;
-        margin-left : 20px;
-        margin-right : 20px;
-    }
-    &__text{
-        font-weight: bold;
-    }
-}
-
-.card:hover{
-    background-color:#e9ddf8; 
-   text-decoration: red;
-   mix-blend-mode: hard-light ;
-}
-
-.steps__icon::after{
-background: red;
-}
-
-.restaurant{
-    display: flex;
-    flex-direction: column;
-    background-color: #f2F2F2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin : 30px 30px 0 15px ;
+      font-size: 26px;
+    }  
+    &__list{
+      background-color : $color-cards ;
       &__title{
-        margin-left : 10px ;
-        font-size: 22px; 
-        font-weight: bold;  
-    }
-.cards{
-        flex-direction: column;
-        display: flex;
-        &__restaurant{
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 0 16px #0000002e;
-            transition: 400ms;
-            margin-right: 20px;
-            margin-left: 20px; 
-        &__img{
-            display: flex;
-            border-radius: 15px 15px 0px 0px;
-            object-fit: cover;
-            width: 100%;
-            margin: 0;
-            max-height: 170px ;
-            height: 170px ;
-        }  
-        &__new{
-            background-color: #91e8d7;
-            color: #489284;
-            padding: 10px 15px 10px 15px;
-            border-radius: 0.125rem;
-            position: absolute;
-            font-weight: bold;
-            right: 30px;
-            margin-top : 15px; 
-        }            
-      
-   &__description{
+        text-transform: uppercase;
+        border-bottom: 3px solid #91e8d7;
+        width : 40px;
+        padding-bottom: 5px;
+        margin: 0; 
+      }
+      &__box{
+        justify-content: space-between;
+        flex-direction: row;
+        row-gap: gap;
+        background-color: white;
+        animation : progress 1s ease both;
+        line-height: 25px;;
+                       &__dish{
+          display : flex ;
+          flex-direction: column;
+                 
         
-        display:flex;
-    &__content{
-        flex:1;
-&__title{
-    font-weight : bold; 
-    padding-top: 10px;
-        padding-left: 10px;
-        margin: 0;
-        padding-bottom: 5px ;
+          &__title {
+            font-weight: bold;
+            margin :0;
+            font-size: 20px;
+          
+          }  
+          &__detail{
+            margin : 0;
+            
+          }
+        }
+        &__price{
+          display: flex;
+          align-items: flex-end; 
+        
+          &__€{
+                       margin : 0;
+            
+          }
+          
+        }
+      }
+    }
+  }
+
+  
+
+
+
+
+@keyframes progress {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
 }
-   
-&__subtitle{
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin: 0;
-    
-}
-}
-&__iconheart{
-    display: flex;
-    margin-right : 20px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    
-&__iconheart1{
-    font-weight:800 ;
-   
-}      
-}
-}
-}
-}
-}
+    }
 
-
-     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-   
-
-
-
-
-
+  

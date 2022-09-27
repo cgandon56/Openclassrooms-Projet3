@@ -5,3 +5,26 @@ body {
     font-family: "Roboto", sans-serif;
     margin :0;
 }
+main {
+    background-color :  #F2F2F2
+}
+p{
+    font-size: 14px;
+}
+
+h1{
+    font-size : 18px;
+    font-weight: lighter;
+  }
+
+  a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  $color-primary:#9356DC ;
+  $color-secondary : #FF79DA ;
+  $color-tertiary : #99E2D0 ;
+  $color-cards : #F2F2F2;
+  $color-green : #91e8d7 ;
