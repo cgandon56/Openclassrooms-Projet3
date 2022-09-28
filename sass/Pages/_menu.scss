@@ -1,80 +1,158 @@
-.img__menu{
+/*section intro*/
+main{
+  display: block;
+}
+
+.intro{
+  display: flex;
+ 
+
+
+  &__img{
     width : 100%;
+   
+ 
+   
   }
-.menu{
-    border-radius: 30px 30px 0 0;
+  }
+
+/*section menu*/
+  .menu{
     display: flex;
     flex-direction: column;
     background-color :$color-cards;
-    margin-top: -30px;
+    border-radius: 20px;
     position: relative;
-    &__title{
+    width : 100% ;
+    margin-top : -50px ;
+    &__heading{
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       margin : 30px 30px 0 15px ;
-      font-size: 26px;
+      &__name{
+        font-size: 26px;
+      }  
     }  
-    &__list{
-      background-color : $color-cards ;
-      &__title{
-        text-transform: uppercase;
-        border-bottom: 3px solid #91e8d7;
-        width : 40px;
-        padding-bottom: 5px;
-        margin: 0; 
-      }
-      &__box{
-        justify-content: space-between;
-        flex-direction: row;
-        row-gap: gap;
-        background-color: white;
-        animation : progress 1s ease both;
-        line-height: 25px;;
-                       &__dish{
-          display : flex ;
-          flex-direction: column;
-                 
-        
-          &__title {
-            font-weight: bold;
-            margin :0;
-            font-size: 20px;
-          
-          }  
-          &__detail{
-            margin : 0;
-            
-          }
-        }
-        &__price{
-          display: flex;
-          align-items: flex-end; 
-        
-          &__€{
-                       margin : 0;
-            
-          }
-          
-        }
-      }
+
+  &__list{
+    background-color : $color-cards ;
+    &__title{
+      text-transform: uppercase;
+      border-bottom: 3px solid $color-tertiary;
+      width : 40px;
+      padding-bottom: 5px;
+      margin: 0; 
     }
+    &__box{
+      
+      &__dish{
+        display : flex ;
+        flex-direction: column; 
+        padding : 15px 0 15px 15px;
+        &__title {
+          font-weight: bold;
+          font-size: 16px;
+          margin: 0;
+       } 
+       &__detail {
+        margin :0;
+       }
+      }
+      &__price{
+        display: flex;
+        align-items: flex-end; 
+        &__€{
+        padding-bottom : 15px ;
+          font-weight: bold;
+          padding-right : 15px ;
+        } 
+      }
+    } 
   }
+  &__ordered{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.btnheart{
+  position: absolute ;
+  &__heartempty{
+  position: relative;
+  cursor: pointer;
+  
+}
+&__heartfull{
+  background: -webkit-linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  position: absolute;
+  transition: 500ms;
+  cursor: pointer;
+  &:hover{
+    opacity: 1;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
 
   
+    
+     
+  
+ 
+  
+        
+    
+  
+  
+    
+     
+             
+       
+        
+         
+        
+             
+              
+                      
+         
+          
+            
 
 
+.check{
+  display: flex;
+  background-color:$color-tertiary ;
+  border-radius: 0 15px 15px 0;
+  width : 65px ;
+  margin : 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  &:hover{
+    margin-right: 0px;
+  }
 
-
-@keyframes progress {
-    0% {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
 }
-    }
+  .fa-circle-check{
+   font-size : 20px ;
+   transform: rotate(0);
+  }
+
+
+
+
+ 
 
   

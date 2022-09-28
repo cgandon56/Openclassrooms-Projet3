@@ -1,4 +1,4 @@
-/*animation arrivée progressive plats*/
+/*animation arrivée progressive plats des menus*/
 .anim{
   &--0{
    animation-delay: 0s;
@@ -26,6 +26,18 @@
     } &--8{
       animation-delay: 0.8s;
     }
-
 } 
+
+@keyframes progress {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+  }
+
+
   

@@ -8,32 +8,41 @@ button{
     padding: 15px 0 15px 0;
     width : 250px ;
     cursor: pointer;
-    box-shadow: 0px 5px 10px 0px #BDBDBD; 
+    box-shadow: 0px 5px 10px 0px  $color-box-shadow; 
     transition: transform 400ms;
     font-size: 16px;
-    margin :40px 0 0 0 ;
+    margin :40px 0 40px 0 ;
+    display: flex;
+    justify-content: center;
     &:hover {
         box-shadow: 0px 5px 10px 0px #676767 ;
         opacity: 0.8; 
         }  
     }
 
-/*cards et cellules */ 
+/*cards et cellules menus */ 
 
 .card{
     display: flex; 
     flex-direction: column;
     row-gap: 20px;
     padding: 20px 15px 50px 15px;
-   
+    
 }
 
 .box{
     display: flex;
-box-shadow: 0px 5px 10px 0px #BDBDBD; 
-padding : 15px 15px 15px 15px; 
-border-radius : 15px;
-cursor: pointer;}
+    box-shadow: 0px 5px 10px 0px $color-box-shadow; 
+    border-radius : 15px;   
+    cursor: pointer;
+    background-color: white;
+        animation : progress 1s ease both;
+         justify-content: space-between;
+      flex-direction: row;
+      line-height: 25px;
+      position: relative;
+      
+}
 
 
     
