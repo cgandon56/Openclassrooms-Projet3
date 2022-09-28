@@ -39,14 +39,16 @@ button {
   box-shadow: 0px 5px 10px 0px #BDBDBD;
   transition: transform 400ms;
   font-size: 16px;
-  margin: 40px 0 0 0;
+  margin: 40px 0 40px 0;
+  display: flex;
+  justify-content: center;
 }
 button:hover {
   box-shadow: 0px 5px 10px 0px #676767;
   opacity: 0.8;
 }
 
-/*cards et cellules */
+/*cards et cellules menus */
 .card {
   display: flex;
   flex-direction: column;
@@ -57,9 +59,14 @@ button:hover {
 .box {
   display: flex;
   box-shadow: 0px 5px 10px 0px #BDBDBD;
-  padding: 15px 15px 15px 15px;
   border-radius: 15px;
   cursor: pointer;
+  background-color: white;
+  animation: progress 1s ease both;
+  justify-content: space-between;
+  flex-direction: row;
+  line-height: 25px;
+  position: relative;
 }
 
 .footer {
@@ -86,6 +93,7 @@ button:hover {
   font-size: 10px;
 }
 
+/*header homepage*/
 .header {
   display: flex;
   justify-content: center;
@@ -97,13 +105,13 @@ button:hover {
   height: 30px;
 }
 
+/*header menu*/
 .header__menu {
   display: flex;
   margin-top: 20px;
   align-items: center;
   justify-content: center;
   background-color: white;
-  margin-bottom: 20px;
 }
 .header__menu__return {
   display: flex;
@@ -116,23 +124,36 @@ button:hover {
   height: 30px;
 }
 
-.img__menu {
+/*section intro*/
+main {
+  display: block;
+}
+
+.intro {
+  display: flex;
+}
+.intro__img {
   width: 100%;
 }
 
+/*section menu*/
 .menu {
-  border-radius: 30px 30px 0 0;
   display: flex;
   flex-direction: column;
   background-color: #F2F2F2;
-  margin-top: -30px;
+  border-radius: 20px;
   position: relative;
+  width: 100%;
+  margin-top: -50px;
 }
-.menu__title {
+.menu__heading {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 30px 30px 0 15px;
+}
+.menu__heading__name {
   font-size: 26px;
 }
 .menu__list {
@@ -140,27 +161,20 @@ button:hover {
 }
 .menu__list__title {
   text-transform: uppercase;
-  border-bottom: 3px solid #91e8d7;
+  border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 5px;
   margin: 0;
 }
-.menu__list__box {
-  justify-content: space-between;
-  flex-direction: row;
-  row-gap: gap;
-  background-color: white;
-  animation: progress 1s ease both;
-  line-height: 25px;
-}
 .menu__list__box__dish {
   display: flex;
   flex-direction: column;
+  padding: 15px 0 15px 15px;
 }
 .menu__list__box__dish__title {
   font-weight: bold;
+  font-size: 16px;
   margin: 0;
-  font-size: 20px;
 }
 .menu__list__box__dish__detail {
   margin: 0;
@@ -170,21 +184,60 @@ button:hover {
   align-items: flex-end;
 }
 .menu__list__box__price__€ {
-  margin: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+.menu__ordered {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes progress {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.btnheart {
+  position: absolute;
 }
+.btnheart__heartempty {
+  position: relative;
+  cursor: pointer;
+}
+.btnheart__heartfull {
+  background: -webkit-linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  position: absolute;
+  transition: 500ms;
+  cursor: pointer;
+}
+.btnheart__heartfull:hover {
+  opacity: 1;
+}
+
+.check {
+  display: flex;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  width: 65px;
+  margin: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+.check:hover {
+  margin-right: 0px;
+}
+
+.fa-circle-check {
+  font-size: 20px;
+  transform: rotate(0);
+}
+
 /*General*/
-.map {
+.reservation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.reservation__map {
   display: flex;
   background-color: #e5e5e5;
   width: 100%;
@@ -192,33 +245,32 @@ button:hover {
   align-items: baseline;
   border-top: solid #bfbfbf;
 }
-.map__icon {
+.reservation__map__icon {
   padding-right: 20px;
 }
-.map__text {
+.reservation__map__text {
   font-weight: bold;
 }
-
-.research {
+.reservation__research {
   display: flex;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-bottom: 50px;
 }
-.research__title {
+.reservation__research__title {
   font-weight: bold;
   font-size: 22px;
   padding: 20px 60px 0 60px;
   margin: 0;
 }
-.research__subtitle {
+.reservation__research__subtitle {
   margin: 20px 20px 0 20px;
 }
 
 .homepage {
   background-color: white;
+  border-radius: 0;
 }
 .homepage__title {
   font-weight: bold;
@@ -226,7 +278,15 @@ button:hover {
   font-size: 22px;
 }
 .homepage__steps {
-  background-color: #f2F2F2;
+  display: flex;
+  box-shadow: 0px 5px 10px 0px #BDBDBD;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #F2F2F2;
+  padding: 15px 0 15px 0;
+}
+.homepage__steps:hover {
+  background-color: #eadbf8;
 }
 .homepage__steps__number {
   width: 20px;
@@ -252,8 +312,8 @@ button:hover {
   font-weight: bold;
 }
 
-.homepage__steps:hover {
-  background-color: #e9ddf8;
+.homepage__steps:hover .iconstep {
+  color: #9356DC;
 }
 
 .restaurant {
@@ -279,7 +339,7 @@ button:hover {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
-  transition: 400ms;
+  transition: 1000ms;
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -293,7 +353,7 @@ button:hover {
   height: 250px;
 }
 .restaurant .imagecards__restaurant__new {
-  background-color: #91e8d7;
+  background-color: #99E2D0;
   color: #489284;
   padding: 10px 15px 10px 15px;
   border-radius: 0.125rem;
@@ -304,8 +364,12 @@ button:hover {
 }
 .restaurant .imagecards__restaurant__description {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .restaurant .imagecards__restaurant__description__content {
+  display: flex;
+  flex-direction: column;
   margin-top: 15px;
   margin-bottom: 15px;
   flex: 1;
@@ -320,18 +384,12 @@ button:hover {
   padding-left: 15px;
   margin: 0;
 }
-.restaurant .imagecards__restaurant__description__icon {
-  display: flex;
-  margin-right: 20px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 2s;
-  transition-delay: 0s;
+.restaurant .imagecards__restaurant__description__content__heartempty {
+  opacity: 1;
+  color: #99E2D0;
 }
 
-/*marges intérieures box*/ /*animation arrivée progressive plats*/
+/*marges intérieures box*/ /*animation arrivée progressive plats des menus*/
 .anim--0 {
   animation-delay: 0s;
 }
@@ -358,6 +416,17 @@ button:hover {
 }
 .anim--8 {
   animation-delay: 0.8s;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
