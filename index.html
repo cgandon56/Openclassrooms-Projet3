@@ -19,38 +19,40 @@
 <!-- main -->
 <main>
    <!-- research -->
-   
-   <div class="map">
-      <i class = "fas fa-map-marker-alt map__icon" ></i>
-      <p class = "map__text">Paris, Belleville</p>
-   </div>
-   <div class = "research">
-      <p class="research__title">Réservez le menu qui vous convient</p>
-      <p class="research__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-      <button class="research__button button">Explorer nos restaurants</button>
-   </div>
+   <section class="reservation">
+      <div class="reservation__map">
+         <i class = "fas fa-map-marker-alt reservation__map__icon" ></i>
+         <p class = "reservation__map__text">Paris, Belleville</p>
+      </div>
+      <div class = "reservation__research">
+         <p class="reservation__research__title">Réservez le menu qui vous convient</p>
+         <p class="reservation__research__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+         <button class="reservation__research__button button">Explorer nos restaurants</button>
+      </div>
+   </section>
 
    <!-- steps   -->
-   <div class = "homepage card">
+   <section class = "homepage card">
       <p class = "homepage__title">Fonctionnement</p>
-      <div class = "homepage__steps box">
+      <div class = "homepage__steps">
          <span class ="homepage__steps__number">1</span>
-         <i class = "icon fas fa-mobile-alt homepage__steps__icon"></i>
+         <i class = "fas fa-mobile-alt homepage__steps__icon iconstep" aria hidden="true"></i>
          <span class ="homepage__steps__text">Choisissez un restaurant</span>
       </div>
-      <div class = "homepage__steps box">
+      <div class = "homepage__steps">
          <span class ="homepage__steps__number">2</span>
-         <i class = "icon fas fa-list-ul homepage__steps__icon"></i>
+         <i class = "iconstep fas fa-list-ul homepage__steps__icon iconstep"></i>
          <span class ="homepage__steps__text">Composez votre menu</span>
       </div>
-      <div class = "homepage__steps box">
+      <div class = "homepage__steps">
          <span class ="homepage__steps__number">3</span>
-         <i class = "icon icon fas fa-store homepage__steps__icon"></i>
+         <i class = "iconstep fas fa-store homepage__steps__icon iconstep"></i>
          <span class ="homepage__steps__text">Dégustez au restaurant</span>
       </div>
-   </div>
+   </section>
+
    <!-- restaurant -->
-   <div class="restaurant">
+   <section class="restaurant">
       <p class="restaurant__title">Restaurants</p>
       <div class ="imagecards">
          <a class="imagecards__restaurant" href="#">
@@ -61,11 +63,12 @@
                   <p class="imagecards__restaurant__description__content__title">La palette du goût</p>
                   <p class="imagecards__restaurant__description__content__subtitle">Ménilmontant</p>
                </div>
-               <div class ="imagecards__restaurant__description__icon">
-                  <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__icon__empty"></i>
-                  <i class = "fa-solid fa-heart fa-lg imagecards__restaurant__description__icon__full" ></i> 
-               </div>
+                  <i class = "fa-regular fa-heart fa-lg heartempty" aria-hidden= "true"></i>
+                  <i class = "fa-solid fa-heart fa-lg heartfull"aria-hidden= "true" ></i> 
+              
             </div>
+         
+      
          </a>
          <a class="imagecards__restaurant" href="#">
             <img class="imagecards__restaurant__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
@@ -75,11 +78,11 @@
                   <p class="imagecards__restaurant__description__content__title">La note enchantée</p>
                   <p class="imagecards__restaurant__description__content__subtitle">Charonne</p>
                </div>
-               <div class ="imagecards__restaurant__description__icon">
+               
                   <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__iconempty"></i>
                   <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__iconfull"></i> 
                </div>
-            </div>
+           
          </a>
          <a class="imagecards__restaurant" href="#">
             <img class="imagecards__restaurant__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
@@ -88,11 +91,11 @@
                   <p class="imagecards__restaurant__description__content__title">A la française</p>
                   <p class="imagecards__restaurant__description__content__subtitle">Cité Rouge</p>
                </div>
-               <div class ="imagecards__restaurant__description__icon">
-                  <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__iconheartempty"></i>
-                  <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__iconheartfull"></i> 
+               
+                  <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__iconempty"></i>
+                  <i class = "fa-regular fa-heart fa-lg imagecards__restaurant__description__iconfull"></i> 
                </div>
-            </div>
+           
          </a>
          <a class="imagecards__restaurant" href="#">
             <img class="imagecards__restaurant__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
@@ -101,14 +104,15 @@
                   <p class="imagecards__restaurant__description__content__title">Le délice des sens</p>
                   <p class="imagecards__restaurant__description__content__subtitle">Folie-Méricourt</p>
                </div>
-               <div class ="imagecards__restaurant__description__icon">
+               
                   <i class = "fa-regular fa-heart fa-2x imagecards__restaurant__description__iconempty"></i>
                   <i class = "fa-regular fa-heart fa-2x imagecards__restaurant__description__iconfull"></i>
                </div>
-            </div>
+            
          </a>
       </div>
-   </div>
+   </section>
+
    <!-- footer -->
    <footer class="footer">
       <h1 class="footer__title">ohmyfood</h1>
