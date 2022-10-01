@@ -1,4 +1,4 @@
-/*General*/
+/*reservation restaurant*/
 .reservation{
     display: flex;
     justify-content: center;
@@ -12,14 +12,14 @@
         border-top : solid #bfbfbf ;
         &__icon{
             padding-right : 20px ;
-    }
+        }
         &__text{
             font-weight: bold;
+        }
     }
-}
     &__research {   
         display: flex; 
-        background-color:   $color-cards;
+        background-color: $color-cards;
         flex-direction: column;
         text-align: center;
         align-items: center;
@@ -31,11 +31,17 @@
         }
         &__subtitle{
             margin: 20px 20px 0 20px;
-  }
-}
+        }
+    }
 }
 
-.homepage{
+
+/*fonctionnement*/
+.operation{
+    display: flex; 
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 15px 50px 15px;
     background-color: white;  
     border-radius : 0;
     &__title{
@@ -52,8 +58,7 @@
         padding : 15px 0 15px 0;  
         &:hover{
             background-color:#eadbf8 ;
-        }   
-             
+        }     
         &__number{
             width : 20px;
             height : 20px ;
@@ -67,60 +72,56 @@
             align-items: center;
             margin-left: -10px;
         }
-        &__icon{
+        &__iconstep{
             width : 20px;
             height : 20px ;
             color : #757575 ;
             margin-left : 30px;
             margin-right : 10px;
-            
-                 }
+            }
         &__text{
-                   font-weight: bold;                   
+            font-weight: bold;                   
         }
-}
+    }
 }
 
-.homepage__steps:hover .iconstep{
+.operation__steps:hover .iconstep{
     color :  $color-primary;
  }
 
 
 
-
+/*restaurant*/
 .restaurant{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
     margin-bottom: 60px;
+    row-gap: 20px;
     &__title{
         margin-left : 10px ;
         font-size: 22px; 
         font-weight: bold; 
         margin-left: 20px; 
     }
-    .imagecards{
+    &__global{
         flex-direction: column;
         display: flex;
-        row-gap: 20px;
-        &__restaurant{
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 0 16px #0000002e;
-            transition: 1000ms;
-            margin-right: 20px;
-            margin-left: 20px; 
-            &__img{
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 16px #0000002e;
+        transition: 1000ms;
+        margin-right: 20px;
+        margin-left: 20px; 
+            &__picture{
                 display: flex;
                 border-radius: 15px 15px 0px 0px;
                 object-fit: cover;
                 width: 100%;
                 margin: 0;
-                max-height: 250px ;
-                height: 250px ;
-        }  
+                max-height: 200px ;
+                height: 200px ;
+             }  
             &__new{
                 background-color: $color-tertiary;
                 color: #489284;
@@ -130,38 +131,38 @@
                 font-weight: bold;
                 right: 30px;
                 margin-top : 15px; 
-        }   
-                         
+            }             
             &__description{
-                display:flex;
+                display: flex;
                 flex-direction: row;
-                align-items: center;
+                margin-top : 15px;
+                margin-bottom: 15px;
+                line-height: 1.5;
                 &__content{
                     display: flex;
                     flex-direction: column;
-                    margin-top : 15px;
-                    margin-bottom: 15px;
-                    flex:1;
-                    line-height: 1.5;
+                    flex : 1;
                     &__title{
                         font-weight : bold; 
                         padding-left: 15px;
                         margin: 0;
-  }
+                    }
                     &__subtitle{
                         padding-left: 15px;
                         margin: 0;
    }
-   &__heartempty{
-    opacity: 1;
-    color : $color-tertiary;
 }
-   }
+                &__iconheart{
+                    align-items: center;
+                    display: flex;
+                  position : relative;
+                    padding-right : 30px;
+                }
+            }
+    }
 }
- 
-}
-}
-}
+   
+
 
 
 
