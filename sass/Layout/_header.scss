@@ -11,7 +11,7 @@
 }
 }
 
-/*header menu*/
+/*header pages menu*/
 
 .header__menu{
   display: flex;
@@ -19,6 +19,7 @@
   align-items: center;
    justify-content: center;
    background-color: white;
+   margin-bottom : 10 ,npx;
 
     &__return{
       display: flex;
