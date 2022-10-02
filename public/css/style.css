@@ -1,9 +1,9 @@
 @charset "UTF-8";
-h1, h2, h3 {
+h1 {
   font-family: "Shrikhand", "cursive";
 }
 
-body {
+body, h2, h3 {
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
@@ -39,7 +39,7 @@ button {
   box-shadow: 0px 5px 10px 0px #BDBDBD;
   transition: transform 400ms;
   font-size: 16px;
-  margin: 40px 0 40px 0;
+  margin: 20px 0 40px 0;
   display: flex;
   justify-content: center;
 }
@@ -48,25 +48,28 @@ button:hover {
   opacity: 0.8;
 }
 
-/*cards et cellules menus */
-.card {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  padding: 20px 15px 50px 15px;
+/*coeur remplissage */
+.empty {
+  position: absolute;
+  font-size: 25px;
+  opacity: 1;
+}
+.empty:hover {
+  cursor: pointer;
+  opacity: 0;
 }
 
-.box {
-  display: flex;
-  box-shadow: 0px 5px 10px 0px #BDBDBD;
-  border-radius: 15px;
+.full {
+  position: absolute;
+  font-size: 25px;
+  opacity: 0;
+}
+.full:hover {
   cursor: pointer;
-  background-color: white;
-  animation: progress 1s ease both;
-  justify-content: space-between;
-  flex-direction: row;
-  line-height: 25px;
-  position: relative;
+  opacity: 1;
+  background: -webkit-linear-gradient(300deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {
@@ -105,13 +108,14 @@ button:hover {
   height: 30px;
 }
 
-/*header menu*/
+/*header pages menu*/
 .header__menu {
   display: flex;
   margin-top: 20px;
   align-items: center;
   justify-content: center;
   background-color: white;
+  margin-bottom: 10, npx;
 }
 .header__menu__return {
   display: flex;
@@ -125,10 +129,6 @@ button:hover {
 }
 
 /*section intro*/
-main {
-  display: block;
-}
-
 .intro {
   display: flex;
 }
@@ -148,16 +148,19 @@ main {
 }
 .menu__heading {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  margin: 30px 30px 0 15px;
 }
 .menu__heading__name {
   font-size: 26px;
+  padding-left: 15px;
 }
-.menu__list {
-  background-color: #F2F2F2;
+.menu__heading__heart {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-right: 30px;
 }
 .menu__list__title {
   text-transform: uppercase;
@@ -166,72 +169,47 @@ main {
   padding-bottom: 5px;
   margin: 0;
 }
-.menu__list__box__dish {
+.menu__list__box__description {
   display: flex;
-  flex-direction: column;
-  padding: 15px 0 15px 15px;
+  overflow: hidden;
+  flex: 1;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 15px 15px 15px 15px;
 }
-.menu__list__box__dish__title {
+.menu__list__box__description__detail {
+  flex-direction: column;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  row-gap: 5px;
+}
+.menu__list__box__description__detail__title {
   font-weight: bold;
   font-size: 16px;
-  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu__list__box__dish__detail {
+.menu__list__box__description__detail__subtitle {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu__list__box__price {
+.menu__list__box__description__price {
+  font-weight: bold;
   display: flex;
   align-items: flex-end;
-}
-.menu__list__box__price__€ {
-  padding-bottom: 15px;
-  font-weight: bold;
-  padding-right: 15px;
+  justify-content: flex-end;
+  margin: 0;
 }
 .menu__ordered {
   display: flex;
   justify-content: center;
 }
 
-.btnheart {
-  position: absolute;
-}
-.btnheart__heartempty {
-  position: relative;
-  cursor: pointer;
-}
-.btnheart__heartfull {
-  background: -webkit-linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
-  -webkit-background-clip: text;
-  position: absolute;
-  transition: 500ms;
-  cursor: pointer;
-}
-.btnheart__heartfull:hover {
-  opacity: 1;
-}
-
-.check {
-  display: flex;
-  background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  width: 65px;
-  margin: 0;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  float: right;
-}
-.check:hover {
-  margin-right: 0px;
-}
-
-.fa-circle-check {
-  font-size: 20px;
-  transform: rotate(0);
-}
-
-/*General*/
+/*reservation restaurant*/
 .reservation {
   display: flex;
   justify-content: center;
@@ -257,6 +235,7 @@ main {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .reservation__research__title {
   font-weight: bold;
@@ -265,19 +244,24 @@ main {
   margin: 0;
 }
 .reservation__research__subtitle {
-  margin: 20px 20px 0 20px;
+  margin: 20px 20px 20px 20px;
 }
 
-.homepage {
+/*fonctionnement*/
+.operation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 30px 20px 60px 20px;
   background-color: white;
   border-radius: 0;
 }
-.homepage__title {
+.operation__title {
   font-weight: bold;
   margin-left: 20px;
   font-size: 22px;
 }
-.homepage__steps {
+.operation__steps {
   display: flex;
   box-shadow: 0px 5px 10px 0px #BDBDBD;
   border-radius: 15px;
@@ -285,10 +269,10 @@ main {
   background-color: #F2F2F2;
   padding: 15px 0 15px 0;
 }
-.homepage__steps:hover {
+.operation__steps:hover {
   background-color: #eadbf8;
 }
-.homepage__steps__number {
+.operation__steps__number {
   width: 20px;
   height: 20px;
   border-radius: 50px;
@@ -301,26 +285,28 @@ main {
   align-items: center;
   margin-left: -10px;
 }
-.homepage__steps__icon {
+.operation__steps__iconstep {
   width: 20px;
   height: 20px;
   color: #757575;
   margin-left: 30px;
   margin-right: 10px;
 }
-.homepage__steps__text {
+.operation__steps__text {
   font-weight: bold;
 }
 
-.homepage__steps:hover .iconstep {
+.operation__steps:hover .iconstep {
   color: #9356DC;
 }
 
+/*restaurant*/
 .restaurant {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 60px;
+  row-gap: 20px;
 }
 .restaurant__title {
   margin-left: 10px;
@@ -328,65 +314,62 @@ main {
   font-weight: bold;
   margin-left: 20px;
 }
-.restaurant .imagecards {
+.restaurant__global {
   flex-direction: column;
   display: flex;
-  row-gap: 20px;
-}
-.restaurant .imagecards__restaurant {
-  display: flex;
-  flex-direction: column;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
   transition: 1000ms;
   margin-right: 20px;
   margin-left: 20px;
+  position: relative;
 }
-.restaurant .imagecards__restaurant__img {
+.restaurant__global__picture__img {
   display: flex;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
   width: 100%;
   margin: 0;
-  max-height: 250px;
-  height: 250px;
+  max-height: 200px;
+  height: 200px;
 }
-.restaurant .imagecards__restaurant__new {
+.restaurant__global__picture__new {
   background-color: #99E2D0;
   color: #489284;
   padding: 10px 15px 10px 15px;
   border-radius: 0.125rem;
   position: absolute;
   font-weight: bold;
-  right: 30px;
-  margin-top: 15px;
+  right: 15px;
+  top: 10px;
 }
-.restaurant .imagecards__restaurant__description {
+.restaurant__global__picture__description {
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
-.restaurant .imagecards__restaurant__description__content {
-  display: flex;
-  flex-direction: column;
   margin-top: 15px;
   margin-bottom: 15px;
-  flex: 1;
   line-height: 1.5;
 }
-.restaurant .imagecards__restaurant__description__content__title {
+.restaurant__global__picture__description__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.restaurant__global__picture__description__content__title {
   font-weight: bold;
   padding-left: 15px;
   margin: 0;
 }
-.restaurant .imagecards__restaurant__description__content__subtitle {
+.restaurant__global__picture__description__content__subtitle {
   padding-left: 15px;
   margin: 0;
 }
-.restaurant .imagecards__restaurant__description__content__heartempty {
-  opacity: 1;
-  color: #99E2D0;
+.restaurant__global__iconheart {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  right: 40px;
 }
 
 /*marges intérieures box*/ /*animation arrivée progressive plats des menus*/
@@ -394,28 +377,10 @@ main {
   animation-delay: 0s;
 }
 .anim--1 {
-  animation-delay: 0.1s;
-}
-.anim--2 {
   animation-delay: 0.2s;
 }
-.anim--3 {
-  animation-delay: 0.3s;
-}
-.anim--4 {
+.anim--2 {
   animation-delay: 0.4s;
-}
-.anim--5 {
-  animation-delay: 0.5s;
-}
-.anim--6 {
-  animation-delay: 0.6s;
-}
-.anim--7 {
-  animation-delay: 0.7s;
-}
-.anim--8 {
-  animation-delay: 0.8s;
 }
 
 @keyframes progress {
@@ -427,6 +392,58 @@ main {
     transform: translateY(0);
     opacity: 1;
   }
+}
+/*animation rotation du check*/
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/*cards et cellules menus */
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 0 15px 50px 15px;
+  background-color: #F2F2F2;
+  animation: progress 1s ease both;
+}
+
+.effect {
+  display: flex;
+  box-shadow: 0px 5px 10px 0px #BDBDBD;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: white;
+  animation: progress 1s ease both;
+  overflow: hidden;
+}
+
+.check {
+  width: 0;
+  background-color: #99e2d0;
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  transition: 400ms;
+  border-radius: 0 15px 15px 0;
+  font-size: 30px;
+}
+
+.effect:hover .check {
+  width: 60px;
+  transition: 400ms;
+}
+
+.effect:hover .fa-circle-check {
+  animation-name: rotate;
+  animation-duration: 400ms;
 }
 
 /*# sourceMappingURL=style.css.map */
