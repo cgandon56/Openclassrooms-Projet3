@@ -112,6 +112,7 @@ button:hover {
 .header__menu {
   display: flex;
   margin-top: 20px;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
   background-color: white;
@@ -133,7 +134,10 @@ button:hover {
   display: flex;
 }
 .intro__img {
+  max-width: 100%;
   width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 /*section menu*/
@@ -141,7 +145,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   background-color: #F2F2F2;
-  border-radius: 20px;
+  border-radius: 30px;
   position: relative;
   width: 100%;
   margin-top: -50px;
@@ -400,6 +404,31 @@ button:hover {
   }
   to {
     -webkit-transform: rotate(360deg);
+  }
+}
+/*spinner*/
+.loader {
+  margin: auto;
+  border: 10px solid white;
+  border-radius: 50%;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  width: 50px;
+  height: 50px;
+  animation: spinner 2s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /*cards et cellules menus */
