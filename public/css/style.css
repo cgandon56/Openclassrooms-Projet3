@@ -13,7 +13,7 @@ main {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h1 {
@@ -34,7 +34,7 @@ button {
   border: none;
   color: white;
   padding: 15px 0 15px 0;
-  width: 250px;
+  max-width: 100%;
   cursor: pointer;
   box-shadow: 0px 5px 10px 0px #BDBDBD;
   transition: transform 400ms;
@@ -42,6 +42,7 @@ button {
   margin: 20px 0 40px 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 button:hover {
   box-shadow: 0px 5px 10px 0px #676767;
@@ -96,6 +97,16 @@ button:hover {
   font-size: 10px;
 }
 
+@media screen and (min-width: 992px) {
+  .footer__title {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__list {
+    justify-content: center;
+    margin-right: 20px;
+  }
+}
 /*header homepage*/
 .header {
   display: flex;
@@ -212,7 +223,22 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+.menu__ordered__button {
+  width: 200px;
+}
 
+@media all and (min-width: 992px) {
+  .cardglobal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100%;
+  }
+  .card {
+    width: 30%;
+    max-width: 30%;
+  }
+}
 /*reservation restaurant*/
 .reservation {
   display: flex;
@@ -250,33 +276,38 @@ button:hover {
 .reservation__research__subtitle {
   margin: 20px 20px 20px 20px;
 }
+.reservation__research__explor {
+  width: 250px;
+}
 
 /*fonctionnement*/
 .operation {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
   padding: 30px 20px 60px 20px;
   background-color: white;
   border-radius: 0;
 }
 .operation__title {
   font-weight: bold;
-  margin-left: 20px;
   font-size: 22px;
 }
 .operation__steps {
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.operation__steps__box {
   box-shadow: 0px 5px 10px 0px #BDBDBD;
   border-radius: 15px;
   cursor: pointer;
   background-color: #F2F2F2;
   padding: 15px 0 15px 0;
 }
-.operation__steps:hover {
+.operation__steps__box:hover {
   background-color: #eadbf8;
 }
-.operation__steps__number {
+.operation__steps__box__number {
   width: 20px;
   height: 20px;
   border-radius: 50px;
@@ -289,28 +320,40 @@ button:hover {
   align-items: center;
   margin-left: -10px;
 }
-.operation__steps__iconstep {
+.operation__steps__box__iconstep {
   width: 20px;
   height: 20px;
   color: #757575;
   margin-left: 30px;
   margin-right: 10px;
 }
-.operation__steps__text {
+.operation__steps__box__text {
   font-weight: bold;
 }
 
-.operation__steps:hover .iconstep {
+.operation__steps__box:hover .iconstep {
   color: #9356DC;
 }
 
+@media screen and (min-width: 992px) {
+  .operation {
+    flex-direction: column;
+  }
+  .operation__steps {
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+  }
+  .operation__steps__box {
+    width: 33%;
+  }
+}
 /*restaurant*/
 .restaurant {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 60px;
-  row-gap: 20px;
 }
 .restaurant__title {
   margin-left: 10px;
@@ -321,15 +364,18 @@ button:hover {
 .restaurant__global {
   flex-direction: column;
   display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+  row-gap: 20px;
+}
+.restaurant__global__presentation {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
   transition: 1000ms;
-  margin-right: 20px;
-  margin-left: 20px;
   position: relative;
 }
-.restaurant__global__picture__img {
+.restaurant__global__presentation__picture__img {
   display: flex;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
@@ -338,7 +384,7 @@ button:hover {
   max-height: 200px;
   height: 200px;
 }
-.restaurant__global__picture__new {
+.restaurant__global__presentation__picture__new {
   background-color: #99E2D0;
   color: #489284;
   padding: 10px 15px 10px 15px;
@@ -348,40 +394,51 @@ button:hover {
   right: 15px;
   top: 10px;
 }
-.restaurant__global__picture__description {
+.restaurant__global__presentation__picture__description {
   display: flex;
   flex-direction: row;
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.5;
 }
-.restaurant__global__picture__description__content {
+.restaurant__global__presentation__picture__description__content {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.restaurant__global__picture__description__content__title {
+.restaurant__global__presentation__picture__description__content__title {
   font-weight: bold;
   padding-left: 15px;
   margin: 0;
 }
-.restaurant__global__picture__description__content__subtitle {
+.restaurant__global__presentation__picture__description__content__subtitle {
   padding-left: 15px;
   margin: 0;
 }
-.restaurant__global__iconheart {
+.restaurant__global__presentation__iconheart {
   display: flex;
   position: absolute;
   bottom: 50px;
   right: 40px;
 }
 
+@media screen and (min-width: 992px) {
+  .restaurant__global {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+  .restaurant__global__presentation {
+    width: 48%;
+  }
+}
 /*marges intérieures box*/ /*animation arrivée progressive plats des menus*/
 .anim--0 {
   animation-delay: 0s;
 }
 .anim--1 {
-  animation-delay: 0.2s;
+  animation-delay: 10s;
 }
 .anim--2 {
   animation-delay: 0.4s;
@@ -438,7 +495,6 @@ button:hover {
   row-gap: 20px;
   padding: 0 15px 50px 15px;
   background-color: #F2F2F2;
-  animation: progress 1s ease both;
 }
 
 .effect {
@@ -447,7 +503,8 @@ button:hover {
   border-radius: 15px;
   cursor: pointer;
   background-color: white;
-  animation: progress 1s ease both;
+  animation: progress ease-in-out 0.8s;
+  animation-fill-mode: both;
   overflow: hidden;
 }
 

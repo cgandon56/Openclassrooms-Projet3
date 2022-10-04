@@ -6,7 +6,7 @@
     row-gap: 20px;
     padding: 0 15px 50px 15px; 
     background-color : $color-cards ; 
-    animation : progress 1s ease both; 
+   
 }
 
 .effect{
@@ -15,7 +15,8 @@
     border-radius : 15px;   
     cursor: pointer;
     background-color: white;
-    animation : progress 1s ease both; 
+    animation : progress ease-in-out 0.8s;
+    animation-fill-mode: both; 
     overflow: hidden;
     }  
 

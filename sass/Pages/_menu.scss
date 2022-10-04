@@ -87,9 +87,26 @@
    &__ordered{
     display: flex;
     justify-content: center;
+    &__button{
+      width : 200px ;
+    }
   }
 }
 
+@media all and (min-width: 992px) {
+
+.cardglobal {
+  display : flex ;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 100%;
+}
+.card{
+  width : 30%;
+  max-width : 30% ;
+}
+}
+  
 
 
 
