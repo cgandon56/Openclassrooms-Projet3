@@ -6,19 +6,18 @@
     row-gap: 20px;
     padding: 0 15px 50px 15px; 
     background-color : $color-cards ; 
-   
+    animation : progress 1s ease-in-out; 
+    
 }
 
-.effect{
+.effect {
     display: flex;
     box-shadow: 0px 5px 10px 0px $color-box-shadow; 
     border-radius : 15px;   
     cursor: pointer;
     background-color: white;
-    animation : progress ease-in-out 0.8s;
-    animation-fill-mode: both; 
     overflow: hidden;
-    }  
+  }
 
 
 .check{
@@ -40,10 +39,7 @@
 	transition: 400ms ;
  }
 
-.effect:hover .fa-circle-check {
-  animation-name: rotate;
-	animation-duration: 400ms ;
-}
+
 
 
 

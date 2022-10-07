@@ -2,7 +2,6 @@
 
 .intro{
   display: flex ;
-  
   &__img{
     max-width : 100%; 
     width : 100% ;
@@ -75,12 +74,10 @@
           &__price{
             font-weight: bold;
             display: flex;
-    align-items: flex-end;
-      justify-content: flex-end;      
+            align-items: flex-end;
+            justify-content: flex-end;      
             margin :0;
-            
           }
-       
       }
     } 
   }
@@ -93,6 +90,7 @@
   }
 }
 
+/*version écran*/
 @media all and (min-width: 992px) {
 
 .cardglobal {

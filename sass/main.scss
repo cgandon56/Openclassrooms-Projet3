@@ -1,12 +1,13 @@
 @import"Base/_typography";
-@import "Composants/_button.scss" ;
+@import "Components/_button.scss" ;
 @import"Layout/_footer.scss";
 @import"Layout/_header.scss";
 @import"Pages/_menu.scss";
 @import"Pages/_homepage.scss" ;
 @import"Utils/_mixins.scss" ;
 @import"Utils/animation";
-@import"Composants/_cards";
+@import"Components/_cards";
+@import"Utils/_variables.scss" ;
 
 
 
