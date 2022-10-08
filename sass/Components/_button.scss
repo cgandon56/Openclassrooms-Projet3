@@ -2,13 +2,13 @@
 
 button{
   border-radius : 100px ;
-  background: linear-gradient(#FF79DA , #9356DC ) ;
+  background: linear-gradient($color-secondary, $color-primary);
   border : none ; 
   color : white ;
   padding: 15px 0 15px 0;
   max-width : 100%;
   cursor: pointer;
-  box-shadow: 0px 5px 10px 0px  $color-box-shadow;
+  box-shadow: 0px 5px 10px 0px  linear-gradient($color-secondary, $color-primary );
   transition: transform 400ms;
   font-size: 16px;
   margin :20px 0 40px 0 ;
@@ -50,6 +50,8 @@ opacity: 0;
   transition: 1s;
 }
 }
+
+
 
 
 
