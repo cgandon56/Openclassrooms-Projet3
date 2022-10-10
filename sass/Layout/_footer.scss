@@ -24,13 +24,11 @@
 
 @media screen and (min-width: 992px){
 .footer{
-   
     &__title{
       display: flex; 
       justify-content: center;
     }
-    &__list{
-             
+    &__list{    
         justify-content: center;
         margin-right : 20px;
     }

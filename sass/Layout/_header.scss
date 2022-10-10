@@ -18,20 +18,18 @@
   margin-top : 20px;
   margin-bottom : 10px ;
   align-items: center;
-   justify-content: center;
-   background-color: white;
-   margin-bottom : 10 ,npx;
-
-    &__return{
-      display: flex;
-      position: absolute;
-      left: 2rem;
-      align-items: center;
-      justify-content: center; 
+  justify-content: center;
+  background-color: white;
+  margin-bottom : 10 ,npx;
+  &__return{
+    display: flex;
+    position: absolute;
+    left: 2rem;
+    align-items: center;
+    justify-content: center; 
    }
     &__logo{
-     height : 30px;
-    
+     height : 30px;   
 }
 }
 
