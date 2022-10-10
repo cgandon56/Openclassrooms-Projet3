@@ -464,6 +464,11 @@ button:hover {
   }
 }
 /*animation du check*/
+.effect:hover .check {
+  width: 60px;
+  transition: 400ms;
+}
+
 .effect:hover .fa-circle-check {
   animation-name: rotate;
   animation-duration: 400ms;
@@ -546,6 +551,7 @@ button:hover {
   overflow: hidden;
 }
 
+/* check*/
 .check {
   width: 0;
   background-color: #99e2d0;
@@ -558,11 +564,6 @@ button:hover {
   transition: 400ms;
   border-radius: 0 15px 15px 0;
   font-size: 30px;
-}
-
-.effect:hover .check {
-  width: 60px;
-  transition: 400ms;
 }
 
 /*# sourceMappingURL=style.css.map */
