@@ -1,9 +1,20 @@
 h1 {
 	font-family: "Shrikhand" , "cursive" ;
+    font-size: 26px;
+    font-weight: lighter;
+    margin : 0;
 }
 body, h2, h3 {
     font-family: "Roboto", sans-serif;
     margin :0;
+}
+
+h2{
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;   
 }
 main {
     background-color :  #F2F2F2
@@ -12,12 +23,7 @@ p{
     font-size: 16px;
 }
 
-h1{
-    font-size : 18px;
-    font-weight: lighter;
-  }
-
-  a{
+a{
     cursor: pointer;
     text-decoration: none;
     color: inherit;

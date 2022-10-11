@@ -25,11 +25,10 @@
       flex-direction: row;
       justify-content: space-between;
       &__name{
-        font-size: 26px;
-        padding-left : 15px ;
+        padding: 30px 0 30px 20px ;
       }
       &__heart{
-      align-items: center;
+        align-items: center;
         display: flex;
         justify-content: center;
         padding-right : 30px;
@@ -41,7 +40,8 @@
       border-bottom: 3px solid $color-tertiary;
       width : 40px;
       padding-bottom: 5px;
-      margin: 0; 
+      font-size: 18px; 
+      font-weight : lighter ;
     }
     &__box{
       &__description{
@@ -60,8 +60,6 @@
           white-space: nowrap;
           row-gap : 5px;
           &__title {
-            font-weight: bold;
-            font-size: 16px;   
             overflow: hidden;
             text-overflow: ellipsis;
           } 
